@@ -1,0 +1,17 @@
+body {
+    background: url("Sandstone.jpg");
+    color: black;
+}
+
+a:link {
+  color: red;}
+
+a:visited {
+  color: red;}
+
+a:hover {
+  color: red;}
+
+
+a:active {
+  color: red;}
