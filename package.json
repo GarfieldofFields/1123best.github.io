@@ -1,0 +1,12 @@
+{
+  "name": "1123.best",
+  "version": "1.0",
+  "description": "a very beautiful website that is beautiful",
+  "author": "mrpapersonic, oppositekittie, and garfieldoffields",
+  "license": "",
+  "homepage": "https://1123.best",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrpapersonic/mrpapersonic.github.io.git"
+  },
+}
