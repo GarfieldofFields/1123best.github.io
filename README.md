@@ -1,9 +1,4 @@
-<h1 align="center">Welcome to 1123.best 👋</h1>
-<p>
-  <a href="https://twitter.com/MrPaperSonic" target="_blank">
-    <img alt="Twitter: MrPaperSonic" src="https://img.shields.io/twitter/follow/MrPaperSonic.svg?style=social" />
-  </a>
-</p>
+<h1 align="center">Welcome to 1123.best</h1>
 
 > the best website to ever exist
 
@@ -12,10 +7,6 @@
 ## Author
 
 👤 **mrpapersonic, oppositekittie, and garfieldoffields**
-
-* Website: 1123.best
-* Twitter: [@MrPaperSonic](https://twitter.com/MrPaperSonic)
-* Github: [@mrpapersonic](https://github.com/mrpapersonic)
 
 ## Show your support
 
