@@ -48,10 +48,23 @@
 			};
 			document.getElementById('button').onclick = function() {
 				init();
-				path = "awesome.xm";
+				path = chooseRandom(arr, 1);
 				player.load(path, afterLoad.bind(this, path));
 			};
 		}
+		const arr = ["awesome.xm", "08_sad_song.it", "db_key2.xm"];
+		const chooseRandom = (arr, num = 1) => {
+			const res = [];
+				for(let i = 0; i < num; ){
+					const random = Math.floor(Math.random() * arr.length);
+					if(res.indexOf(arr[random]) !== -1){
+						continue;
+					};
+					res.push(arr[random]);
+					i++;
+				};
+				return res;
+			};
 		</script>
 		<script src="js/libopenmpt.js"></script>
 		<script src="js/chiptune2.js"></script>
