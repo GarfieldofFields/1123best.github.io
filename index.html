@@ -16,32 +16,55 @@
 				font-size:18px;
 				background: url("Sandstone.jpg");
 				color: black;
+				text-align: center;
 			}
-
 			a:link {
 				color: red;}
-
 			a:visited {
 				color: red;}
-
 			a:hover {
 				color: red;}
-
-
 			a:active {
 				color: red;}
-			
 		</style>
-		<link rel="icon" type="image/png" href="https://1123.best/1123icon.png" />
+		<script>
+		window['libopenmpt'] = {};
+		libopenmpt.locateFile = function (filename) {
+			return filename;
+		};
+		libopenmpt.onRuntimeInitialized = function () {
+			var player;
+			function init() {
+				if (player == undefined) {
+					player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1));
+				}
+				else {
+					player.stop();
+					player = undefined;
+				}
+			};
+			function afterLoad(path, buffer) {
+				player.play(buffer);
+			};
+			document.getElementById('button').onclick = function() {
+				init();
+				path = "awesome.xm";
+				player.load(path, afterLoad.bind(this, path));
+			};
+		}
+		</script>
+		<script src="js/libopenmpt.js"></script>
+		<script src="js/chiptune2.js"></script>
+		<link rel="icon" type="image/png" href="1123icon.png" />
 	</head>
     <body>
-		<h1 style="color:red;font-size:100px;text-align:center;">1123</h1>
-		<p style="text-align:center;">
-			<a style="text-decoration:none" href="https://1123.best/torrents/">torrents</a><br><br>
-			<a style="text-decoration:none" href="https://1123.best/funny.exe">secret</a><br><br>
+		<h1 style="color:red;font-size:100px;">1123</h1>
+		<p>
+			<a style="text-decoration:none" href="torrents/">torrents</a><br><br>
+			<a style="text-decoration:none" href="funny.exe">secret</a><br><br>
 		</p>
-		<h2 style="text-align:center;">social</h2>
-		<p style="text-align:center;">
+		<h2>social</h2>
+		<p>
 			<a href="https://www.youtube.com/channel/UC8bzv1d7bFdKz9xvOE52Xng" ><img src="img/ytbutton.gif" width="88" height="31" /></a>
 			<a href="https://discord.gg/j6GTC9F" ><img src="img/discord2.gif" width="88" height="31" /></a>
 			<a href="https://twitter.com/1123Real" ><img src="img/twitterbutton.gif" width="88" height="31" /></a><br><br>
@@ -51,8 +74,8 @@
 			</video>
 			<img src="img/funnytext.gif" alt="RIP GarfieldofFields :(" height="107" width="730">
 		</p>
-		<iframe src="neverstopspeedcore.mp3" allow="autoplay" style="display:none"></iframe>
-		<p style="text-align:center";> 
+		<input id="button" type="submit" name="button" value="awesome"/>
+		<p> 
 			<a href="https://7-zip.org/"><img src="https://www.7-zip.org/logos/7zlogo01.png" width="88" height="31" /></a> 
 			<a href="https://openmpt.org/"><img src="https://openmpt.org/img/openmpt-button-1.png" width="88" height="31" /></a>
 			<a href="https://www.foobar2000.org/"><img src="https://www.foobar2000.org/button.png" width="88" height="31" /></a>
@@ -62,6 +85,6 @@
 			<a href="http://toastytech.com/evil/index.html" ><img src="img/evilie.gif" width="88" height="31" /></a>
 			<a href="https://ubuntu.com/" ><img src="img/ubuntu.gif" width="88" height="31" /></a>
 		</p>
-		<link rel="stylesheet" type="text/css" href="./font.css">
+		<link rel="stylesheet" type="text/css" href="./css/font.css">
 	</body>
 </html>
