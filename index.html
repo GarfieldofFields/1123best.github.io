@@ -49,7 +49,9 @@
 			document.getElementById('button').onclick = function() {
 				init();
 				path = chooseRandom(arr, 1);
-				player.load(path, afterLoad.bind(this, path));
+				if (player != undefined) {
+					player.load(path, afterLoad.bind(this, path));
+				}
 			};
 		}
 		const arr = ["awesome.xm", "08_sad_song.it", "db_key2.xm"];
