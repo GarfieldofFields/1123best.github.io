@@ -48,13 +48,13 @@
 			};
 			document.getElementById('button').onclick = function() {
 				init();
-				path = chooseRandom(arr, 1);
+				path = "chips/" + chooseRandom(arr, 1);
 				if (player != undefined) {
 					player.load(path, afterLoad.bind(this, path));
 				}
 			};
 		}
-		const arr = ["awesome.xm", "08_sad_song.it", "db_key2.xm"];
+		const arr = ["4-mat_-_rose.xm", "1999.xm", "ahteam_-_quick_unpack_0_7.xm", "cocoon_land.xm", "elw-sick.xm", "external.xm", "red_green_blue_4.xm", "sky_sunday.xm", "stages.mod", "unbreakabledetermination.it", "unreeeal_superhero_3.xm", "red_green_blue_4.xm", "awesome.xm", "08_sad_song.it", "db_key2.xm"];
 		const chooseRandom = (arr, num = 1) => {
 			const res = [];
 				for(let i = 0; i < num; ){
